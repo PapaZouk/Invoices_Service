@@ -4,15 +4,18 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
+    public static final Scanner SCANNER = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        PrintingService.introduction();
+        PrintingService.help();
 
         CEO ceo = new CEOImpl();
         Accountant accountant = new AccountantImpl();
         InvoiceStack invoiceStack = new InvoiceStack();
 
-        while (scanner.hasNextLine()) {
-            String input = scanner.nextLine();
+        while (SCANNER.hasNextLine()) {
+            String input = SCANNER.nextLine();
             if (input.contains(PrintingService.CEO_ADD_INVOICE)) {
                 String amount = getAmount(input);
                 try {
@@ -28,6 +31,7 @@ public class Main {
                 break;
             } else {
                 System.out.println(PrintingService.UNKNOWN_COMMAND);
+                PrintingService.help();
             }
         }
     }

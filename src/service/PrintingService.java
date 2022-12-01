@@ -43,5 +43,19 @@ public class PrintingService {
                 ", " + invoice.getAmount());
     }
 
+    public static void help() {
+        System.out.println("Use following commands to: ");
+        System.out.printf("%-30s \t:\t %-20s\n", "\"CEO: ADD INVOICE(amount)\"", "to add new invoice.");
+        System.out.printf("%-30s \t:\t %-20s\n", "\"ACCOUNTANT: PROCESS INVOICE\"", "to process last invoice.");
+        System.out.printf("%-30s \t:\t %-20s\n", "\"SHOW INVOICES\" ", "to check available invoices.");
+        System.out.printf("%-30s \t:\t %-20s\n\n", "\"EXIT\"", "to exit program.");
+    }
+
+    public static void introduction() {
+        System.out.println("-----------------------------------------------------");
+        System.out.println("\t\t## INVOICE SERVICE MANAGER ##");
+        System.out.println("-----------------------------------------------------");
+    }
+
 }
 

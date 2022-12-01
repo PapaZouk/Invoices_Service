@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb1f8431-dfaa-4bee-b457-70ee523a9f2f" name="Changes" comment="Uzupełnia stałe statyczne w PrintingService i usuwa zbędne zmienne">
+    <list default="true" id="cb1f8431-dfaa-4bee-b457-70ee523a9f2f" name="Changes" comment="Poprawia pętlę while dla skanera i odczytu danych">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/PrintingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PrintingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669896425076</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Poprawia pętlę while dla skanera i odczytu danych">
+      <created>1669898957633</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669898957633</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Poprawia pętlę while dla skanera i odczytu danych">
+      <created>1669899000740</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669899000740</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +119,7 @@
     <MESSAGE value="Dodaje nowe stałe do PrintingService oraz poprawia metodę main" />
     <MESSAGE value="Przenosi pole statyczne invoices do klasy InvoiceStack i implementuje nowy obiekt do serwisu" />
     <MESSAGE value="Uzupełnia stałe statyczne w PrintingService i usuwa zbędne zmienne" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uzupełnia stałe statyczne w PrintingService i usuwa zbędne zmienne" />
+    <MESSAGE value="Poprawia pętlę while dla skanera i odczytu danych" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawia pętlę while dla skanera i odczytu danych" />
   </component>
 </project>
