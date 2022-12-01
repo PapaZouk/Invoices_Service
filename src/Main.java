@@ -11,33 +11,33 @@ public class Main {
         Accountant accountant = new AccountantImpl();
         InvoiceStack invoiceStack = new InvoiceStack();
 
-        StringBuilder cmd = new StringBuilder();
 
         beginning:
         while (scanner.hasNextLine()) {
-            cmd.append(scanner.nextLine());
-            if (cmd.toString().contains(PrintingService.CEO_ADD_INVOICE)) {
-                int start = cmd.toString().lastIndexOf("(");
-                int end = cmd.toString().lastIndexOf(")");
-                String line = cmd.substring(start + 1, end);
+            String input = scanner.nextLine();
+            if (input.contains(PrintingService.CEO_ADD_INVOICE)) {
+                String amount = getAmount(input);
                 try {
-                    ceo.addInvoice(invoiceStack, BigDecimal.valueOf(Double.parseDouble(line)));
+                    ceo.addInvoice(invoiceStack, BigDecimal.valueOf(Double.parseDouble(amount)));
                 } catch (NumberFormatException e) {
                     System.out.println(PrintingService.FORMAT_WARNING);
                 }
-                cmd = new StringBuilder();
-            } else if (cmd.toString().contains(PrintingService.ACCOUNTANT_PROCESS_INVOICE)) {
+            } else if (input.contains(PrintingService.ACCOUNTANT_PROCESS_INVOICE)) {
                 accountant.process(invoiceStack);
-                cmd = new StringBuilder();
-            } else if (cmd.toString().equals(PrintingService.SHOW_INVOICES)) {
+            } else if (input.equals(PrintingService.SHOW_INVOICES)) {
                 Invoice.printInvoices(invoiceStack);
-                cmd = new StringBuilder();
-            } else if (cmd.toString().equals(PrintingService.EXIT)) {
-                cmd = new StringBuilder();
+            } else if (input.equals(PrintingService.EXIT)) {
                 break;
             } else {
                 System.out.println(PrintingService.UNKNOWN_COMMAND);
             }
         }
     }
+
+    private static String getAmount(String input) {
+        int start = input.lastIndexOf("(");
+        int end = input.lastIndexOf(")");
+        return input.substring(start + 1, end);
+    }
+
 }
