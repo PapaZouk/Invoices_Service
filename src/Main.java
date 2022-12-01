@@ -11,8 +11,6 @@ public class Main {
         Accountant accountant = new AccountantImpl();
         InvoiceStack invoiceStack = new InvoiceStack();
 
-
-        beginning:
         while (scanner.hasNextLine()) {
             String input = scanner.nextLine();
             if (input.contains(PrintingService.CEO_ADD_INVOICE)) {
