@@ -31,11 +31,11 @@ public class InvoiceStack {
         return totalAmount;
     }
 
-    public double addTotalAmount(BigDecimal amount) {
-        return totalAmount += amount.setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    public void addTotalAmount(BigDecimal amount) {
+        totalAmount += amount.setScale(2, RoundingMode.HALF_EVEN).doubleValue();
     }
 
-    public double reduceTotalAmount(BigDecimal amount) {
-        return totalAmount -= amount.setScale(2, RoundingMode.HALF_EVEN).doubleValue();
+    public void reduceTotalAmount(BigDecimal amount) {
+        totalAmount -= amount.setScale(2, RoundingMode.HALF_EVEN).doubleValue();
     }
 }

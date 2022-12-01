@@ -5,8 +5,6 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Invoice {
-
-    public static double TOTAL_AMOUNT = 0;
     private static Integer invoicesCounter = 0;
     private final LocalDate invoiceDate = LocalDate.now();
     private final BigDecimal amount;
@@ -19,12 +17,14 @@ public class Invoice {
     }
 
     public static void printInvoices(InvoiceStack invoiceStack) {
-        System.out.println(PrintingService.CURRENT_INVOICES_TO_PROCESS + " \n-------------------------------");
+        System.out.println(PrintingService.CURRENT_INVOICES_TO_PROCESS +
+                " \n-------------------------------");
         for (Invoice invoice : invoiceStack.getInvoices()) {
             if (invoice != null) {
-                System.out.println("[ID: " + invoice.getID() + "/" +
+                System.out.println("[" + PrintingService.ID + invoice.getID() + "/" +
                         invoice.getInvoiceDate().getYear() +
-                        ", amount: " + invoice.getAmount().setScale(2, RoundingMode.HALF_EVEN) + "]");
+                        ", " + PrintingService.AMOUNT +
+                        invoice.getAmount().setScale(2, RoundingMode.HALF_EVEN) + "]");
             } else {
                 System.out.println(PrintingService.NO_MORE_INVOICES_TO_PROCESS);
             }

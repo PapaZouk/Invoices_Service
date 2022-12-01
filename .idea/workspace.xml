@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb1f8431-dfaa-4bee-b457-70ee523a9f2f" name="Changes" comment="Dodaje nowe stałe do PrintingService oraz poprawia metodę main">
-      <change afterPath="$PROJECT_DIR$/src/service/InvoiceStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Accountant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AccountantImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountantImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CEO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CEOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CEOImpl.java" afterDir="false" />
+    <list default="true" id="cb1f8431-dfaa-4bee-b457-70ee523a9f2f" name="Changes" comment="Przenosi pole statyczne invoices do klasy InvoiceStack i implementuje nowy obiekt do serwisu">
       <change beforePath="$PROJECT_DIR$/src/service/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/PrintingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PrintingService.java" afterDir="false" />
     </list>
@@ -50,6 +44,7 @@
       <recent name="service" />
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="service.PrintingService" />
       <recent name="service.Invoice" />
     </key>
   </component>
@@ -76,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669893114739</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Przenosi pole statyczne invoices do klasy InvoiceStack i implementuje nowy obiekt do serwisu">
+      <created>1669895634645</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669895634645</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +95,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicjalizacja programu Invoice Service" />
     <MESSAGE value="Dodaje nowe stałe do PrintingService oraz poprawia metodę main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodaje nowe stałe do PrintingService oraz poprawia metodę main" />
+    <MESSAGE value="Przenosi pole statyczne invoices do klasy InvoiceStack i implementuje nowy obiekt do serwisu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Przenosi pole statyczne invoices do klasy InvoiceStack i implementuje nowy obiekt do serwisu" />
   </component>
 </project>
