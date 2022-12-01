@@ -37,9 +37,13 @@ public class Invoice {
     public static void printInvoices() {
         System.out.println(PrintingService.CURRENT_INVOICES_TO_PROCESS + " \n-------------------------------");
         for (Invoice invoice : INVOICES) {
-            System.out.println("[ID: " + invoice.getID() + "/" +
-                    invoice.getInvoiceDate().getYear() +
-                    ", amount: " + invoice.getAmount().setScale(2, RoundingMode.HALF_EVEN) + "]");
+            if (invoice != null) {
+                System.out.println("[ID: " + invoice.getID() + "/" +
+                        invoice.getInvoiceDate().getYear() +
+                        ", amount: " + invoice.getAmount().setScale(2, RoundingMode.HALF_EVEN) + "]");
+            } else {
+                System.out.println(PrintingService.NO_MORE_INVOICES_TO_PROCESS);
+            }
         }
     }
 

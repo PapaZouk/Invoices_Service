@@ -27,10 +27,13 @@ public class Main {
                 cmd = new StringBuilder();
             } else if (cmd.toString().contains(PrintingService.ACCOUNTANT_PROCESS_INVOICE)) {
                 accountant.process();
+                cmd = new StringBuilder();
             } else if (cmd.toString().equals(PrintingService.SHOW_INVOICES)) {
                 Invoice.printInvoices();
+                cmd = new StringBuilder();
             } else if (cmd.toString().equals(PrintingService.EXIT)) {
-                break beginning;
+                cmd = new StringBuilder();
+                break;
             } else {
                 System.out.println(PrintingService.UNKNOWN_COMMAND);
                 break beginning;

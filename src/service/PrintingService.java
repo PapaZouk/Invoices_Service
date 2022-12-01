@@ -15,8 +15,8 @@ public class PrintingService {
     public static final String CURRENT_INVOICES_AMOUNT = "Current invoices amount: ";
     public static final String CEO_ADDED_INVOICE_ID = "CEO added invoice: ID: ";
     public static final String ACCOUNTANT_PROCESSED_INVOICE = "ACCOUNTANT processed invoice: ";
-
     public static final String CURRENT_INVOICES_TO_PROCESS = "Current invoices to process:";
+    public static final String NO_MORE_INVOICES_TO_PROCESS = "No more invoices to process";
 
     public static void printSummary() {
         System.out.print(CURRENT_INVOICES_AMOUNT +
