@@ -4,5 +4,5 @@ import java.math.BigDecimal;
 
 @FunctionalInterface
 public interface CEO {
-    void addInvoice(BigDecimal amount);
+    void addInvoice(InvoiceStack invoiceStack, BigDecimal amount);
 }

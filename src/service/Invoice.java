@@ -3,14 +3,10 @@ package service;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
-import java.util.ArrayDeque;
 
 public class Invoice {
 
-    private static final ArrayDeque<Invoice> INVOICES = new ArrayDeque<>();
-
     public static double TOTAL_AMOUNT = 0;
-
     private static Integer invoicesCounter = 0;
     private final LocalDate invoiceDate = LocalDate.now();
     private final BigDecimal amount;
@@ -22,21 +18,9 @@ public class Invoice {
         this.ID += invoicesCounter;
     }
 
-    public static void addInvoice(Invoice invoice) {
-        INVOICES.push(invoice);
-    }
-
-    public static Invoice getInvoicePeek() {
-        return INVOICES.peek();
-    }
-
-    public static void popInvoice() {
-        INVOICES.pop();
-    }
-
-    public static void printInvoices() {
+    public static void printInvoices(InvoiceStack invoiceStack) {
         System.out.println(PrintingService.CURRENT_INVOICES_TO_PROCESS + " \n-------------------------------");
-        for (Invoice invoice : INVOICES) {
+        for (Invoice invoice : invoiceStack.getInvoices()) {
             if (invoice != null) {
                 System.out.println("[ID: " + invoice.getID() + "/" +
                         invoice.getInvoiceDate().getYear() +
@@ -45,6 +29,7 @@ public class Invoice {
                 System.out.println(PrintingService.NO_MORE_INVOICES_TO_PROCESS);
             }
         }
+
     }
 
     public Integer getID() {
@@ -59,8 +44,4 @@ public class Invoice {
         return invoiceDate;
     }
 
-    @Override
-    public String toString() {
-        return "Invoice ID = " + ID + ", amount = " + amount.setScale(2, RoundingMode.HALF_EVEN);
-    }
 }

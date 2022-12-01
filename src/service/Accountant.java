@@ -2,5 +2,5 @@ package service;
 
 @FunctionalInterface
 public interface Accountant {
-    void process();
+    void process(InvoiceStack invoiceStack);
 }

@@ -18,10 +18,10 @@ public class PrintingService {
     public static final String CURRENT_INVOICES_TO_PROCESS = "Current invoices to process:";
     public static final String NO_MORE_INVOICES_TO_PROCESS = "No more invoices to process";
 
-    public static void printSummary() {
+    public static void printSummary(InvoiceStack invoiceStack) {
         System.out.print(CURRENT_INVOICES_AMOUNT +
-                BigDecimal.valueOf(Invoice.TOTAL_AMOUNT).setScale(2, RoundingMode.HALF_EVEN) + ". ");
-        Invoice.printInvoices();
+                BigDecimal.valueOf(invoiceStack.getTotalAmount()).setScale(2, RoundingMode.HALF_EVEN) + ". ");
+        Invoice.printInvoices(invoiceStack);
     }
 
     public static void printProcessMsg(Invoice invoice) {

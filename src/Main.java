@@ -9,6 +9,7 @@ public class Main {
 
         CEO ceo = new CEOImpl();
         Accountant accountant = new AccountantImpl();
+        InvoiceStack invoiceStack = new InvoiceStack();
 
         StringBuilder cmd = new StringBuilder();
 
@@ -20,23 +21,22 @@ public class Main {
                 int end = cmd.toString().lastIndexOf(")");
                 String line = cmd.substring(start + 1, end);
                 try {
-                    ceo.addInvoice(BigDecimal.valueOf(Double.parseDouble(line)));
+                    ceo.addInvoice(invoiceStack, BigDecimal.valueOf(Double.parseDouble(line)));
                 } catch (NumberFormatException e) {
                     System.out.println(PrintingService.FORMAT_WARNING);
                 }
                 cmd = new StringBuilder();
             } else if (cmd.toString().contains(PrintingService.ACCOUNTANT_PROCESS_INVOICE)) {
-                accountant.process();
+                accountant.process(invoiceStack);
                 cmd = new StringBuilder();
             } else if (cmd.toString().equals(PrintingService.SHOW_INVOICES)) {
-                Invoice.printInvoices();
+                Invoice.printInvoices(invoiceStack);
                 cmd = new StringBuilder();
             } else if (cmd.toString().equals(PrintingService.EXIT)) {
                 cmd = new StringBuilder();
                 break;
             } else {
                 System.out.println(PrintingService.UNKNOWN_COMMAND);
-                break beginning;
             }
         }
     }
